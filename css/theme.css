@@ -1,0 +1,127 @@
+/* Main CSS for Motorcycle Mania
+ * - Utilizes Flexbox and Grid for responsive layout without fixed heights or floats.
+ * - Includes a responsive video and image wrapper for better media display.
+ * - Implements a consistent color scheme and typography for readability.
+ * - Media queries improve the site's mobile responsiveness.
+ * - Added .hidden class for dynamic content display controlled by JavaScript.
+ * - Added disclaimer section styling for legal notices or brief messages.
+ */
+
+ body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #c50404;
+  color: #000000;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+header {
+  background-color: #f00c0c;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #333333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul li a:hover, nav ul li a.active {
+  background-color: #555555;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+figure, .video-wrapper, .image-wrapper {
+  margin: 10px 0;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.video-wrapper, .image-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* Maintain aspect ratio */
+}
+
+.video-wrapper iframe, .image-wrapper .image-bike {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.disclaimer {
+  background-color: #f1f1f1;
+  color: #666;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.8em;
+}
+
+footer {
+  background-color: #202020;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  header {
+    text-align: center;
+  }
+}
