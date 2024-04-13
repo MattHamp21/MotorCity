@@ -82,7 +82,7 @@ figcaption {
 .video-wrapper, .image-wrapper {
   position: relative;
   overflow: hidden;
-  padding-top: 56.25%; /* Maintain aspect ratio */
+  padding-top: 56.25%;
 }
 
 .video-wrapper iframe, .image-wrapper .image-bike {
